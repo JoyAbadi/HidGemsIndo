@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles2.css" />
+  </head>
+  <body>
+    <div id="homepage">
+      <div id="logo">
+        <h1>HidGemsIndo</h1>
+      </div>
+      <div id="menu">
+        <ul>
+          <li>
+            <a href="index.html" onclick="navigate('index')">Home</a>
+            <a href="about.html" onclick="navigate('about')">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card-container">
+        <div class="card">
+          <div class="front">
+            <div class="card-img">
+              <img src="joy.jpg" alt="Joy" />
+            </div>
+            <div class="card-body">
+              <h3>Joy Abadi</h3>
+            </div>
+          </div>
+          <div class="back">
+            <p>
+              <span>IG : @joy_rockniel</span>
+            </p>
+            <br />
+            <button
+              onclick="window.location.href='https://www.instagram.com/joy_rockniel/';"
+            >
+              Click Here
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <div class="front">
+            <div class="card-img">
+              <img
+                src="WhatsApp Image 2023-04-03 at 21.03.11.jpg"
+                alt="Matthew"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Matthew Chang</h3>
+            </div>
+          </div>
+          <div class="back">
+            <p>
+              <span>IG : @matthewchang20</span>
+            </p>
+            <button
+              onclick="window.location.href='https://www.instagram.com/matthewchang20/';"
+            >
+              Click Here
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <div class="front">
+            <div class="card-img">
+              <img src="WhatsApp Image 2023-04-03 at 19.57.08.jpg" alt="Webe" />
+            </div>
+            <div class="card-body">
+              <h3>Wilbert Bernardi</h3>
+            </div>
+          </div>
+          <div class="back">
+            <p>
+              <span>IG : @wilbert_b32</span>
+            </p>
+            <button
+              onclick="window.location.href='https://www.instagram.com/wilbert_b32/';"
+            >
+              Click Here
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <div class="front">
+            <div class="card-img">
+              <img src="WhatsApp Image 2023-04-03 at 17.38.32.jpg" alt="Raka" />
+            </div>
+            <div class="card-body">
+              <h3>Raka Satya Wurya Andhika</h3>
+            </div>
+          </div>
+          <div class="back">
+            <p>
+              <span>IG : @raka_s.w.a.t</span>
+            </p>
+            <button
+              onclick="window.location.href='https://www.instagram.com/raka_s.w.a.t/';"
+            >
+              Click Here
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function navigate(page) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("content").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", page + ".html", true);
+        xhttp.send();
+      }
+    </script>
+  </body>
+</html>

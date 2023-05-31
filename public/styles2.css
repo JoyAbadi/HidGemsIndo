@@ -1,0 +1,278 @@
+body {
+  background-image: url("laut.jpg");
+}
+
+#homepage {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+#logo h1 {
+  display: inline-block;
+  margin-left: 10px;
+  filter: grayscale(100%) brightness(150%);
+}
+
+#menu ul li a:hover,
+#menu ul li a.active {
+  border-bottom: 5px solid;
+  transform: translateY(-5px) scale(1.1);
+}
+
+#menu ul li a {
+  text-decoration: none;
+  border-bottom: 5px solid transparent;
+  margin-right: 10px;
+  font-weight: bold;
+  color: black;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5),
+    -1px -1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.5),
+    -1px 1px 0 rgba(255, 255, 255, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+#menu {
+  margin-top: 16px;
+  position: relative;
+}
+
+#menu ul li {
+  list-style: none;
+  padding: 0;
+  display: block;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.show-sub-menu .sub-menu {
+  display: block;
+}
+
+.sub-menu li {
+  list-style: none;
+}
+
+.sub-menu li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+figure {
+  position: relative;
+  display: inline-block;
+}
+
+img {
+  display: block;
+  position: relative;
+  top: 50%;
+  width: 100%;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  color: black;
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  size: 20px;
+}
+
+#introtext {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: red;
+  position: relative;
+  top: 69%;
+  transform: translateY(-50%);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  background-color: aquamarine;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: lightblue;
+}
+
+header {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
+  h1 {
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-flow: wrap;
+  height: 100vh;
+  align-items: center;
+}
+.card-container {
+  /* background: rgba(0,0,0,0.4); */
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0 12px;
+  perspective: 900px;
+  text-align: center;
+}
+.card {
+  position: relative;
+  width: 200px;
+  height: 260px;
+  transition: all 0.6s ease;
+  transform-style: preserve-3d;
+}
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3),
+    0 17px 17px 0 rgba(0, 0, 0, 0.15);
+  backface-visibility: hidden;
+}
+.front {
+  background: #fec606;
+  font-size: 12px;
+
+  .card-img {
+    background: black;
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    & img {
+      width: 100%;
+      height: 100%;
+      top: 0px;
+    }
+  }
+  .card-body {
+    width: 100%;
+    height: 150px;
+    color: black;
+    h3 {
+      font-size: 15px;
+    }
+  }
+
+  .card-footer {
+    font-size: 16px;
+  }
+}
+.back {
+  background: tomato;
+  font-size: 14px;
+  p {
+    padding: 1em;
+    font-weight: 100;
+    span {
+      font-weight: bold;
+    }
+  }
+  ul li {
+    text-align: left;
+  }
+  button {
+    background: none;
+    border-radius: 4px;
+    border: solid 1px white;
+    color: white;
+    padding: 0.5em 1em;
+    &:hover {
+      background: white;
+      color: green;
+    }
+  }
+}
+.card-container:hover .card {
+  transform: rotateY(180deg);
+}
+.back {
+  transform: rotateY(180deg);
+}
+
+/* Default styles */
+
+/* Add your default styles here */
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+  #homepage {
+    flex-direction: column;
+  }
+
+  #menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #menu ul li {
+    margin-bottom: 10px;
+  }
+
+  .pengurus {
+    width: 100%;
+    margin: 10px;
+  }
+}
+
+/* Media query for screens between 600px and 1024px */
+@media (min-width: 600px) and (max-width: 1024px) {
+  /* Add your specific styles for this range of screen sizes */
+}
+
+/* Media query for screens larger than 1024px */
+@media (min-width: 1024px) {
+  /* Add your specific styles for this range of screen sizes */
+}
+
+.button {
+  font-size: 24px;
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+}
